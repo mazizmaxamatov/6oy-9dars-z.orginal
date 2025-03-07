@@ -1,26 +1,32 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from "react";
 import useAzizHook from "./hooks/Azizhook";
-import Navbar from "./components/Navbar";
+
 import Login from "./components/Login";
-import Profile from "./components/Profile";
-import ItemCreate from "./components/ItemCreate";
-import ItemUpdate from "./components/ItemUpdate";
-import ItemListView from "./components/ItemListView";
+import AddItem from "./components/AddItem";
+import ItemList from "./components/ItemList";
 
 const App = () => {
-    const { user, login, logout, items, addItem, updateItem, deleteItem } = useAzizHook();
+    const { 
+        user, login, logout, 
+        items, name, setName, surname, setSurname, age, setAge, 
+        addItem, editingItem, setEditingItem, updateItem, deleteItem 
+    } = useAzizHook();
 
     return (
-        <Router>
-            <Navbar user={user} />
-            <Routes>
-                <Route path="/login" element={<Login onLogin={login} />} />
-                <Route path="/profile" element={<Profile user={user} onLogout={logout} />} />
-                <Route path="/items" element={<ItemListView items={items} onEdit={updateItem} onDelete={deleteItem} />} />
-                <Route path="/add-item" element={user ? <ItemCreate onAdd={addItem} /> : <p>Login qiling!</p>} />
-                <Route path="/edit-item/:id" element={user ? <ItemUpdate onSave={updateItem} /> : <p>Login qiling!</p>} />
-            </Routes>
-        </Router>
+        <div className="p-6 max-w-lg mx-auto bg-gray-100 min-h-screen">
+            <h1 className="text-3xl font-bold text-center mb-6">User Management System</h1>
+            
+            <Login user={user} login={login} logout={logout} />
+            <AddItem name={name} setName={setName} surname={surname} setSurname={setSurname} age={age} setAge={setAge} addItem={addItem} />
+            <ItemList 
+                items={items} 
+                editingItem={editingItem} setEditingItem={setEditingItem} 
+                name={name} setName={setName} 
+                surname={surname} setSurname={setSurname} 
+                age={age} setAge={setAge} 
+                updateItem={updateItem} deleteItem={deleteItem} 
+            />
+        </div>
     );
 };
 

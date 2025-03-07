@@ -1,29 +1,27 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 
-const Login = ({ onLogin }) => {
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [age, setAge] = useState("");
-    const navigate = useNavigate();
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (!firstName.trim() || !lastName.trim() || !age.trim()) {
-            alert("Iltimos, barcha maydonlarni to'ldiring!");
-            return;
-        }
-        onLogin({ firstName, lastName, age });
-        navigate("/profile");
-    };
-
+const Login = ({ user, login, logout }) => {
     return (
-        <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="Ism" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
-            <input type="text" placeholder="Familiya" value={lastName} onChange={(e) => setLastName(e.target.value)} />
-            <input type="number" placeholder="Yosh" value={age} onChange={(e) => setAge(e.target.value)} />
-            <button type="submit">Login</button>
-        </form>
+        <div className="bg-white p-4 rounded-lg shadow-md">
+            {!user ? (
+                <button 
+                    onClick={() => login({ name: "Aziz" })} 
+                    className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
+                >
+                    Login
+                </button>
+            ) : (
+                <div>
+                    <p className="text-lg font-semibold mb-2">Welcome, {user.name}!</p>
+                    <button 
+                        onClick={logout} 
+                        className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition"
+                    >
+                        Logout
+                    </button>
+                </div>
+            )}
+        </div>
     );
 };
 
