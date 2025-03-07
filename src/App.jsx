@@ -14,7 +14,7 @@ const App = () => {
 
     return (
         <div className="p-6 max-w-lg mx-auto bg-gray-100 min-h-screen">
-            <h1 className="text-3xl font-bold text-center mb-6">User Management System</h1>
+
             
             <Login user={user} login={login} logout={logout} />
             <AddItem name={name} setName={setName} surname={surname} setSurname={setSurname} age={age} setAge={setAge} addItem={addItem} />
