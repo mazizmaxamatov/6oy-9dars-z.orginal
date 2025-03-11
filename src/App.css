@@ -1,7 +1,386 @@
-body{
-  text-align: center;
-  font-family:Arial, Helvetica, sans-serif;
-}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1189px;
+    margin: auto;
+}
+
+nav {
+    max-width: 1440px;
+    margin: auto;
+}
+
+/*==================================================================nav .nav_top==================================================================*/
+
+nav .nav_top {
+    max-width: 1440px;
+    margin: auto;
+    background-color: #EBEFF3;
+    padding: 11px;
+}
+
+nav .nav_top .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .nav_top ul {
+    display: flex;
+    gap: 28px;
+}
+
+nav .nav_top ul li a {
+    width: 57px;
+    height: 18px;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 14px;
+    color: #545D6A;
+}
+
+nav .nav_top .nav_t_r {
+    display: flex;
+    gap: 20px;
+}
+
+nav .nav_top .nav_t_r p {
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 14px;
+    color: #545D6A;
+}
+
+nav .nav_top .nav_t_r span {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 14px;
+    color: #545D6A;
+}
+
+/*==================================================================nav .nav_main .left========================================================*/
+
+nav .nav_main .container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+
+nav .nav_main .left {
+    display: flex;
+}
+
+nav .nav_main .left p {
+    width: 48px;
+    height: 48px;
+    background-image: url(./assets/ashyosvg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav .nav_main .left h4 {
+    width: 102px;
+    height: 42px;
+    background-image: url(./assets/ashyo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*=========================================================================nav .nav_main .center========================================================================*/
+
+nav .nav_main .center {
+    display: flex;
+    gap: 10px;
+}
+
+nav .nav_main .center button {
+    width: 140px;
+    height: 48px;
+    border-radius: 6px;
+    background-color: #134E9B;
+    color: white;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+nav .nav_main .center input {
+    width: 518px;
+    height: 48px;
+    border-radius: 6px;
+    background-color: #EBEFF3;
+    color: #00000033;
+}
+
+nav .nav_main .center h4 {
+    width: 23px;
+    height: 21px;
+    border-radius: 5px;
+    margin-top: 12px;
+    background-image: url(./assets/sorc.png);
+    background-repeat: no-repeat;
+    background-color: #134E9B;
+}
+
+nav .nav_main .right {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+nav .nav_main .right h2 {
+    width: 24px;
+    height: 24px;
+    background-image: url(./assets/toroz.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav .nav_main .right h3 {
+    width: 24px;
+    height: 24px;
+    background-image: url(./assets/yure.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav .nav_main .right h4 {
+    width: 24px;
+    height: 24px;
+    background-image: url(./assets/shop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav .nav_main .right h5 {
+    width: 24px;
+    height: 24px;
+    background-image: url(./assets/odam.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*=========================================================nav_bottom=========================================================*/
+
+.nav_bottom {
+    max-width: 1400px;
+    margin: auto;
+
+}
+
+.nav_bottom ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_bottom ul li a {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.nav_bottom {
+    padding: 30px 0px;
+}
+
+/*===========================================================================================header=============================================================================*/
+
+header {
+    max-width: 1440px;
+    margin: auto;
+    height: 450px;
+    background-image: url(./assets/header.img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #F3F0F0;
+}
+
+header .header_main {
+    padding-top: 147px;
+}
+
+header .header_main h1 {
+    max-width: 594px;
+    height: 53px;
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 44px;
+    color: #0A1729;
+}
+
+header .header_main p {
+    max-width: 596px;
+    height: 38px;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    color: #0A1729;
+    margin-top: 6px;
+}
+
+header .header_main button {
+    width: 161px;
+    height: 54px;
+    top: 466px;
+    left: 130px;
+    border-radius: 6px;
+    padding: 18px 16px;
+    background-color: #0F4A97;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 22px;
+}
+
+/*================================================================menubrand  menu==============================================================*/
+
+menu {
+    max-width: 1440px;
+    margin: auto;
+    padding: 100px 0px 110px 0px;
+}
+
+menu .besh {
+    display: flex;
+    justify-content: space-between;
+}
+
+menu .bir .artel {
+    width: 310px;
+    height: 98px;
+    background-image: url(./assets/brand.img/artel.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+menu .bir .apple {
+    width: 310px;
+    height: 169px;
+    background-image: url(./assets/brand.img/apple.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 10px;
+}
+
+menu .ikki .samsung {
+    width: 300px;
+    height: 167px;
+    background-image: url(./assets/brand.img/samsung_brand.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+menu .ikki .vivo {
+    width: 300px;
+    height: 100px;
+    background-image: url(./assets/brand.img/vivo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 10px;
+}
+
+menu .uch .nokia {
+    width: 320px;
+    height: 120px;
+    background-image: url(./assets/brand.img/nokia.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+menu .uch .huawey {
+    width: 320px;
+    height: 147px;
+    background-image: url(./assets/brand.img/huwavei.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 10px;
+}
+
+menu .tort .mi {
+    width: 220px;
+    height: 223px;
+    background-image: url(./assets/brand.img/mi.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+menu .tort button {
+    max-width: 220px;
+    height: 44px;
+    border-radius: 6px;
+    padding: 12px 86px;
+    margin-top: 10px;
+    background-color: #EBEFF3;
+    color: #134E9B;
+}
+
+/*============================================================card==================================================*/
+
+.slider-container {
+    width: 1440px;
+    margin: auto;
+}
+
+.slider-container .card {
+    width: 273px;
+    margin-bottom: 60px;
+}
+
+.slider-container .card h5 {
+    width: 284px;
+    height: 280px;
+    background-image: url(./assets/airpods.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #EBEFF3;
+    border-radius: 5px;
+}
+
+.slider-container .card p {
+    width: 257px;
+    height: 36px;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 14px;
+    color: #545D6A;
+    margin-top: 20px;
+}
+
+.slider-container .card h4 {
+    width: 146px;
+    height: 25px;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 20px;
+    color: #0A1729;
+    margin-top: 30px;
+}
+
+.slider-container .card h3 {
+    width: 180px;
+    height: 27px;
+    border-radius: 3px;
+    padding-top: 7px;
+    padding-right: 10px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    background: #F02C961A;
+    color: #F02C96;
+    margin-top: 15px;
+}
+
+.slider-container .slider{
+    margin-bottom: 100px;
+}

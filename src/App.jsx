@@ -1,9 +1,104 @@
 import React from "react";
+import Nav from "./components/Nav";
+import Header from "./components/Header";
+import MenuBrand from "./components/MenuBrand";
+import Card from "./components/Card";
+
+
+
+function App() {
+  return (
+    <div>
+      <Nav/>
+      <Header/>
+      <MenuBrand/>
+      <Card/>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+import React from "react";
 import useAzizHook from "./hooks/Azizhook";
 
 import Login from "./components/Login";
 import AddItem from "./components/AddItem";
 import ItemList from "./components/ItemList";
+import Nav from "./components/Navbar";
+
+
+
 
 const App = () => {
     const { 
@@ -13,6 +108,19 @@ const App = () => {
     } = useAzizHook();
 
     return (
+
+
+        <div>
+
+<Nav/>
+
+
+
+        </div>
+
+
+
+
         <div className="p-6 max-w-lg mx-auto bg-gray-100 min-h-screen">
 
             
@@ -27,7 +135,10 @@ const App = () => {
                 updateItem={updateItem} deleteItem={deleteItem} 
             />
         </div>
+
+
     );
 };
 
 export default App;
+*/
